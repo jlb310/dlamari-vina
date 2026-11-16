@@ -1,1 +1,135 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>D'lamari · Información clara</title><link rel="stylesheet" href="styles.css"></head><body><header class="topbar"><a class="brand" href="#inicio"><span class="brand-mark">D</span><span>D'LAMARI <b>RESTAURANTE</b></span></a><nav><a href="#carta">Carta</a><a href="#horarios">Horarios</a><a href="#consulta">Consulta</a></nav><a class="nav-cta" href="#consulta">Consultar ↗</a></header><main><section id="inicio" class="hero"><div class="hero-copy"><p class="eyebrow"><span class="dot"></span> Av. Borgoño 17.150 · Viña del Mar</p><h1>Sabor<br><em>sin dudas.</em></h1><p class="hero-intro">Encuentra nuestra carta, revisa el horario de cocina y confirma tu visita desde una sola fuente de información.</p><div class="hero-actions"><a class="button primary" href="#carta">Ver carta <span>↓</span></a><a class="button ghost" href="#consulta">Hacer una consulta</a></div><div class="hero-note"><span>●</span> Estado de cocina actualizado · Información por confirmar claramente señalada</div></div><div class="hero-visual"><div class="sun"></div><div class="hero-card"><span class="tag">HORARIO DE COCINA</span><h2 id="kitchen-status">Abierta hoy</h2><p>Lunes a domingo<br>13:00 — 21:00</p><strong id="status-note">Verifica antes de venir</strong></div></div></section><section id="horarios" class="service-strip"><div><span class="service-icon">◷</span><div><b>Cocina 13:00 — 21:00</b><small>Horario publicado en esta demo</small></div></div><div><span class="service-icon">◉</span><div><b>Una fuente de verdad</b><small>Sin horarios contradictorios</small></div></div><div><span class="service-icon">⌁</span><div><b>¿Tienes dudas?</b><small>Déjanos tu consulta</small></div></div><span class="whatsapp-link">Teléfono por confirmar</span></section><section id="carta" class="menu-section"><div class="section-heading"><div><p class="eyebrow">Carta digital</p><h2>Elige tranquilo</h2></div><p class="section-description">Precios y disponibilidad visibles antes de tu visita.</p></div><div class="category-tabs"><button class="tab active" data-category="todos">Todo</button><button class="tab" data-category="comida">Para compartir</button><button class="tab" data-category="bebidas">Bebidas</button></div><div id="menu-grid" class="menu-grid"></div></section><section id="consulta" class="reservation"><div><p class="eyebrow">Antes de venir</p><h2>¿Tienes una<br><em>consulta?</em></h2><p>Escríbenos qué necesitas confirmar: horario, carta, acceso o disponibilidad. El canal de contacto queda pendiente de confirmación del negocio.</p><div class="order-status"><span class="status-dot"></span><div><b>Canal oficial por confirmar</b><small>No mostramos teléfonos sin validar</small></div></div></div><form id="query-form"><label>Nombre<input id="query-name" required placeholder="Tu nombre"></label><label>Consulta<textarea id="query-message" required placeholder="¿Qué quieres confirmar?" rows="4"></textarea></label><button class="button light" type="submit">Preparar consulta <span>↗</span></button></form></section></main><footer id="contacto"><div class="footer-brand"><span class="brand-mark">D</span><div><strong>D'LAMARI</strong><small>Av. Borgoño 17.150 · Viña del Mar</small></div></div><div class="footer-links"><span>Contacto por confirmar</span><a class="prototype" href="https://spacehost.cl">Prototipo de SpaceHost ↗</a></div></footer><div id="toast" class="toast"></div><script type="module" src="./src/main.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4ede1">
+<title>D'LAMARI · Restaurante frente al mar en Viña del Mar</title>
+<meta name="description" content="D'LAMARI, cocina del mar en Av. Borgoño 17.150, Viña del Mar. Paila marina, ceviche, pescado del día y empanadas de mariscos. Cocina de 13:00 a 21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="marca" href="#inicio" aria-label="D'LAMARI, inicio">
+    <svg class="marca-ola" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M7 23c3-3 5.5-3 8.5 0s5.5 3 8.5 0 5.5-3 8.5 0M9 28c2.6-2.4 4.8-2.4 7.4 0s4.8 2.4 7.4 0 4.8-2.4 7.4 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="20" cy="14" r="3.2" fill="currentColor"/></svg>
+    <span>D'LAMARI</span>
+  </a>
+  <nav class="nav-links" aria-label="Secciones">
+    <a href="#carta">Carta</a>
+    <a href="#horario">Horario</a>
+    <a href="#llegar">Cómo llegar</a>
+  </nav>
+  <a class="nav-cta" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Borgo%C3%B1o%2017150%2C%20Vi%C3%B1a%20del%20Mar" target="_blank" rel="noopener">Cómo llegar</a>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="hero-foto">
+      <img src="https://images.unsplash.com/photo-1794416028440-6bb3d7f86d7e?w=1800&amp;q=74&amp;auto=format&amp;fit=crop"
+           srcset="https://images.unsplash.com/photo-1794416028440-6bb3d7f86d7e?w=900&amp;q=70&amp;auto=format&amp;fit=crop 900w, https://images.unsplash.com/photo-1794416028440-6bb3d7f86d7e?w=1800&amp;q=74&amp;auto=format&amp;fit=crop 1800w, https://images.unsplash.com/photo-1794416028440-6bb3d7f86d7e?w=2600&amp;q=74&amp;auto=format&amp;fit=crop 2600w"
+           sizes="100vw" alt="Pescado a la parrilla con limón en una mesa frente a la playa" fetchpriority="high">
+    </div>
+    <div class="hero-velo"></div>
+    <div class="hero-contenido">
+      <p class="eti entra">Cocina del mar · Viña del Mar</p>
+      <h1 class="entra">Del Pacífico<br><em>a la mesa.</em></h1>
+      <p class="hero-bajada entra">Paila marina, ceviche y pescado del día en el camino costero de Av. Borgoño, con el mar a pocos pasos.</p>
+      <div class="hero-acciones entra">
+        <a class="boton boton--claro" href="#carta">Ver la carta</a>
+        <a class="boton boton--linea" href="#llegar">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="hero-pie">
+      <p class="estado" data-estado><i></i><span>Cocina de 13:00 a 21:00</span></p>
+      <p class="hero-dir">Av. Borgoño 17.150</p>
+    </div>
+  </section>
+
+  <section class="intro" id="intro">
+    <p class="eti revela">La casa</p>
+    <p class="cita revela">Cocina sencilla, <em>producto del día</em> y una mesa con vista a la bahía.</p>
+    <div class="intro-cols">
+      <div class="revela"><span class="num">I</span><h3>Lo que trae el mar</h3><p>La pesca y los mariscos cambian según el día. Lo que hay se cocina; lo que no, se dice antes de pedir.</p></div>
+      <div class="revela"><span class="num">II</span><h3>Recetas de la costa</h3><p>Paila marina, empanadas de mariscos y ceviche mixto: los clásicos de la costa central, sin vueltas.</p></div>
+      <div class="revela"><span class="num">III</span><h3>Precios a la vista</h3><p>La carta completa con precios antes de llegar, para elegir tranquilo y sin sorpresas.</p></div>
+    </div>
+  </section>
+
+  <figure class="panorama">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1718781209339-99726d9c77ea?w=2200&amp;q=72&amp;auto=format&amp;fit=crop" alt="Costa de Viña del Mar con acantilados y edificios frente al océano">
+    <figcaption>Borde costero de Viña del Mar</figcaption>
+  </figure>
+
+  <section class="carta" id="carta">
+    <header class="seccion-cab">
+      <div>
+        <p class="eti revela">La carta</p>
+        <h2 class="revela">Para compartir<br><em>frente al mar.</em></h2>
+      </div>
+      <p class="seccion-bajada revela">Precios en pesos chilenos. Los platos marcados «del día» dependen de la pesca y se confirman en el local.</p>
+    </header>
+
+    <div class="pestanas" role="tablist" aria-label="Filtrar la carta">
+      <button class="pestana activa" role="tab" aria-selected="true" data-tipo="todo">Todo</button>
+      <button class="pestana" role="tab" aria-selected="false" data-tipo="comida">Cocina</button>
+      <button class="pestana" role="tab" aria-selected="false" data-tipo="bebidas">Para beber</button>
+    </div>
+
+    <div class="carta-grilla" id="carta-grilla"></div>
+  </section>
+
+  <section class="horario" id="horario">
+    <figure class="horario-foto">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1779919025347-2993d994c506?w=1400&amp;q=72&amp;auto=format&amp;fit=crop" alt="Terraza de restaurante frente a la bahía al atardecer">
+    </figure>
+    <div class="horario-texto">
+      <p class="eti revela">Horario</p>
+      <h2 class="revela">Del almuerzo<br><em>al atardecer.</em></h2>
+      <dl class="horas revela">
+        <div><dt>Lunes a domingo</dt><dd>13:00 — 21:00</dd></div>
+        <div><dt>Cocina</dt><dd>Hasta las 21:00</dd></div>
+      </dl>
+      <p class="estado estado--grande revela" data-estado><i></i><span>Cocina de 13:00 a 21:00</span></p>
+    </div>
+  </section>
+
+  <section class="galeria" aria-label="Platos y ambiente">
+    <figure class="g1 revela"><img loading="lazy" src="https://images.unsplash.com/photo-1765100479761-2359e22fbe16?w=1100&amp;q=70&amp;auto=format&amp;fit=crop" alt="Bandeja de mariscos variados con ostiones, choritos y camarones"></figure>
+    <figure class="g2 revela"><img loading="lazy" src="https://images.unsplash.com/photo-1679694140422-aecfd3d5dd0b?w=800&amp;q=70&amp;auto=format&amp;fit=crop" alt="Ostras y mariscos sobre hielo con limón"></figure>
+    <figure class="g3 revela"><img loading="lazy" src="https://images.unsplash.com/photo-1758448786233-2051ecd150c8?w=800&amp;q=70&amp;auto=format&amp;fit=crop" alt="Calamares a la parrilla servidos junto al mar"></figure>
+    <figure class="g4 revela"><img loading="lazy" src="https://images.unsplash.com/photo-1568044401410-a95b08960705?w=800&amp;q=70&amp;auto=format&amp;fit=crop" alt="Botella de vino blanco y dos copas en una terraza frente al mar"></figure>
+    <figure class="g5 revela"><img loading="lazy" src="https://images.unsplash.com/photo-1590683034521-70ab9e261fd1?w=1100&amp;q=70&amp;auto=format&amp;fit=crop" alt="Roqueríos y mar de la costa central"></figure>
+  </section>
+
+  <section class="llegar" id="llegar">
+    <div class="llegar-texto">
+      <p class="eti revela">Cómo llegar</p>
+      <h2 class="revela">Av. Borgoño<br><em>17.150.</em></h2>
+      <p class="seccion-bajada revela">En el camino costero de Viña del Mar, entre el mar y los roqueríos. Abre la ruta en tu teléfono y llega directo.</p>
+      <div class="llegar-acciones revela">
+        <a class="boton boton--mar" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Borgo%C3%B1o%2017150%2C%20Vi%C3%B1a%20del%20Mar" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        <a class="boton boton--linea-oscura" href="https://waze.com/ul?q=Av.%20Borgo%C3%B1o%2017150%20Vi%C3%B1a%20del%20Mar&amp;navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+      </div>
+    </div>
+    <dl class="llegar-datos revela">
+      <div><dt>Dirección</dt><dd>Av. Borgoño 17.150<br>Viña del Mar</dd></div>
+      <div><dt>Horario</dt><dd>Todos los días<br>13:00 — 21:00</dd></div>
+      <div><dt>Reservas y consultas</dt><dd>Canal oficial<br><span class="pendiente">por confirmar</span></dd></div>
+    </dl>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie-marca">D'LAMARI</div>
+  <p>Cocina del mar · Av. Borgoño 17.150 · Viña del Mar</p>
+  <p class="pie-creditos">Fotos de referencia: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> · Prototipo de <a href="https://spacehost.cl" target="_blank" rel="noopener">SpaceHost</a></p>
+</footer>
+
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

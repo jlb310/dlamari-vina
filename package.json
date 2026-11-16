@@ -1,9 +1,6 @@
 {
-  "name": "prueba123",
+  "name": "dlamari-vina",
   "private": true,
   "type": "module",
-  "scripts": {
-    "dev": "tsc --noEmit && echo 'typecheck ok'",
-    "build": "tsc --noEmit && echo 'typecheck ok'"
-  }
+  "description": "Landing de D'LAMARI (Viña del Mar). Sitio estático: index.html, styles.css y src/main.js."
 }
