@@ -2,5 +2,5 @@
   "name": "dlamari-vina",
   "private": true,
   "type": "module",
-  "description": "Landing de D'LAMARI (Viña del Mar). Sitio estático: index.html, styles.css y src/main.js."
+  "description": "Demo de Spacehost para D'LAMARI (Viña del Mar): carta con información única, lista de espera y pedidos en orden de llegada, y sus administradores. Sitio estático; la landing anterior está en /landing/."
 }
